@@ -1,0 +1,79 @@
+.app {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+ 
+.app header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 16px;
+  margin-bottom: 8px;
+}
+ 
+h1 { margin: 0; font-size: 28px; }
+ 
+button {
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font: inherit;
+  cursor: pointer;
+}
+button:disabled { opacity: 0.6; cursor: not-allowed; }
+ 
+input[type='text'] {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--input);
+  color: var(--text);
+  font: inherit;
+}
+ 
+form { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.row { display: flex; gap: 8px; margin: 12px 0; }
+ 
+.muted { color: var(--muted); margin: 8px 0; }
+ 
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+ 
+.error {
+  flex-basis: 100%;
+  background: var(--error-bg);
+  color: var(--error-text);
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin: 0;
+  font-size: 14px;
+}
+ 
+.tabs { display: flex; gap: 8px; margin-bottom: 8px; }
+.tabs button { background: transparent; color: var(--text); }
+.tabs button.active { background: var(--accent); color: #fff; }
+ 
+ul { list-style: none; padding: 0; margin: 8px 0; max-height: 260px; overflow: auto; }
+li { display: flex; align-items: center; gap: 10px; padding: 10px 4px; border-bottom: 1px solid var(--border); }
+li span { flex: 1; }
+li.done span { text-decoration: line-through; color: var(--muted); }
+li.pending { opacity: 0.5; }
+li button { padding: 6px 10px; }
+ 
+.actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+.dim { opacity: 0.6; }
+
+
